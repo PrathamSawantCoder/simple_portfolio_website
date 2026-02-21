@@ -1,5 +1,5 @@
 
-export const Button = ({className = "", size= "default", children}) => {
+export const Button = ({className = "", size= "default", children, ...props}) => {
     const baseClasses = "relative overflow-hidden rounded-full font-medium focus:outline-none focus:ring-2 focus:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25 cursor-pointer"
 
     const sizeClasses = {
@@ -10,7 +10,7 @@ export const Button = ({className = "", size= "default", children}) => {
 
     const classes = `${baseClasses} ${sizeClasses[size]} ${className}`
   return (
-    <button className={classes}>
+    <button className={classes} {...props}>
         <span className="relative flex items-center justify-center gap-2">
             {children}
         </span>

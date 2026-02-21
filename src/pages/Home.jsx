@@ -12,14 +12,14 @@ const Home = () => {
 
   return (
     <div className='min-h-screen overflow-x-hidden'>
-      <Navbar/>
+      <div id="#navbar"><Navbar/></div>
       <main>
-        <Hero/>
-        <About/>
-        <Experience/>
-        <Projects/>
-        <Testimonials/>
-        <Contact/>
+        <div id="#hero"><Hero/></div>
+        <div id="#about"><About/></div>
+        <div id="#experience"><Experience/></div>
+        <div id="#projects"><Projects/></div>
+        <div id="#testimonials"><Testimonials/></div>
+        <div id="#contact"><Contact/></div>
       </main>
     </div>
   )

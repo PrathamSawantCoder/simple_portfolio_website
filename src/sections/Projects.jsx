@@ -1,81 +1,81 @@
 import { useState, useEffect, useRef } from 'react'
 
+const categories = ['all', 'web', 'mobile', 'design', 'fullstack']
+  
+const projects = [
+  {
+    id: 1,
+    title: 'E-Commerce Platform',
+    description: 'Full-stack e-commerce solution with real-time inventory management and secure payment processing.',
+    image: '/projects/yks_web.png',
+    category: 'fullstack',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+    demoUrl: '#',
+    githubUrl: '#',
+    featured: true
+  },
+  {
+    id: 2,
+    title: 'Task Management App',
+    description: 'Collaborative task management tool with real-time updates and team collaboration features.',
+    image: '/projects/apnine_ai.png',
+    category: 'web',
+    technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
+    demoUrl: '#',
+    githubUrl: '#',
+    featured: true
+  },
+  {
+    id: 3,
+    title: 'Weather Dashboard',
+    description: 'Beautiful weather application with interactive maps and detailed forecasts.',
+    image: '/projects/apple_web.png',
+    category: 'web',
+    technologies: ['React', 'OpenWeather API', 'Chart.js'],
+    demoUrl: '#',
+    githubUrl: '#',
+    featured: false
+  },
+  {
+    id: 4,
+    title: 'Fitness Tracker',
+    description: 'Mobile-first fitness tracking app with workout plans and progress analytics.',
+    image: '/projects/yks_web.png',
+    category: 'mobile',
+    technologies: ['React Native', 'Redux', 'Firebase'],
+    demoUrl: '#',
+    githubUrl: '#',
+    featured: false
+  },
+  {
+    id: 5,
+    title: 'Brand Identity Design',
+    description: 'Complete brand identity design for tech startup including logo and marketing materials.',
+    image: '/projects/apnine_ai.png',
+    category: 'design',
+    technologies: ['Figma', 'Adobe Creative Suite'],
+    demoUrl: '#',
+    githubUrl: '#',
+    featured: false
+  },
+  {
+    id: 6,
+    title: 'Social Media Dashboard',
+    description: 'Analytics dashboard for social media management with real-time data visualization.',
+    image: '/projects/apple_web.png',
+    category: 'fullstack',
+    technologies: ['Next.js', 'D3.js', 'PostgreSQL'],
+    demoUrl: '#',
+    githubUrl: '#',
+    featured: true
+  }
+]
+
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [activeFilter, setActiveFilter] = useState('all')
   const [filteredProjects, setFilteredProjects] = useState([])
   const projectsRef = useRef(null)
-
-  const categories = ['all', 'web', 'mobile', 'design', 'fullstack']
-  
-  const projects = [
-    {
-      id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with real-time inventory management and secure payment processing.',
-      image: '/projects/yks_web.png',
-      category: 'fullstack',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      demoUrl: '#',
-      githubUrl: '#',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative task management tool with real-time updates and team collaboration features.',
-      image: '/projects/apnine_ai.png',
-      category: 'web',
-      technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-      demoUrl: '#',
-      githubUrl: '#',
-      featured: true
-    },
-    {
-      id: 3,
-      title: 'Weather Dashboard',
-      description: 'Beautiful weather application with interactive maps and detailed forecasts.',
-      image: '/projects/apple_web.png',
-      category: 'web',
-      technologies: ['React', 'OpenWeather API', 'Chart.js'],
-      demoUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'Fitness Tracker',
-      description: 'Mobile-first fitness tracking app with workout plans and progress analytics.',
-      image: '/projects/yks_web.png',
-      category: 'mobile',
-      technologies: ['React Native', 'Redux', 'Firebase'],
-      demoUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Brand Identity Design',
-      description: 'Complete brand identity design for tech startup including logo and marketing materials.',
-      image: '/projects/apnine_ai.png',
-      category: 'design',
-      technologies: ['Figma', 'Adobe Creative Suite'],
-      demoUrl: '#',
-      githubUrl: '#',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for social media management with real-time data visualization.',
-      image: '/projects/apple_web.png',
-      category: 'fullstack',
-      technologies: ['Next.js', 'D3.js', 'PostgreSQL'],
-      demoUrl: '#',
-      githubUrl: '#',
-      featured: true
-    }
-  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -102,7 +102,7 @@ const Projects = () => {
     } else {
       setFilteredProjects(projects.filter(project => project.category === activeFilter))
     }
-  }, [activeFilter, projects])
+  }, [activeFilter])
 
   const getProjectByIndex = (index) => {
     return projects[index % projects.length]
