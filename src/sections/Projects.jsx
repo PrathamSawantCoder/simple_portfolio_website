@@ -8,7 +8,7 @@ const projects = [
   {
     id: 1,
     title: 'Ylä Karjalan Sähkö Website',
-    description: 'A responsive and user-friendly website for an electrician company.',
+    description: 'A responsive and user-friendly website made for my present electrician company named Ylä Karjalan Sähkö Oy.',
     image: '/projects/yks_web.png',
     category: 'web',
     technologies: ['React', 'Tailwind CSS', 'Node.js' ],
@@ -37,7 +37,8 @@ const projects = [
     demoUrl: 'https://pratham-apple-clone.vercel.app/',
     githubUrl: 'https://github.com/PrathamSawantCoder/apple_website',
     featured: true
-  }
+  },
+  
 ]
 
 const Projects = () => {
@@ -101,7 +102,7 @@ const Projects = () => {
                 className="group relative overflow-hidden rounded-3xl hover-scale "
                 style={{ transitionDelay: `${index * 0.2}s` }}
               >
-                <div className="relative z-10 h-96 overflow-hidden">
+                <div className="relative h-96 overflow-hidden ">
                   <div 
                     className="absolute inset-0 bg-linear-to-br from-primary/20 to-highlight/20"
                     style={{
@@ -112,7 +113,7 @@ const Projects = () => {
                       transition: 'transform 0.6s ease'
                     }}
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-surface/90 via-surface/50 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-surface/90 via-surface/50 to-transparent " />
                   
                   {/* Overlay content */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
@@ -131,7 +132,7 @@ const Projects = () => {
                   </div>
                 </div>
                 
-                <div className="p-6 glass">
+                <div className="p-6 glass rounded-3xl rounded-t-none">
                   <h4 className="text-xl font-bold mb-2">{project.title}</h4>
                   <p className="text-muted-foreground mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
@@ -173,7 +174,7 @@ const Projects = () => {
           <h3 className="text-2xl lg:text-3xl font-bold mb-8 text-center">All Projects</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
-              <div 
+              <div
                 key={project.id}
                 className="group relative overflow-hidden rounded-3xl hover-scale"
                 style={{ transitionDelay: `${index * 0.1}s` }}
@@ -189,7 +190,7 @@ const Projects = () => {
                       transition: 'transform 0.6s ease'
                     }}
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-surface/90 via-surface/50 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-surface/90 via-surface/50 to-transparent " />
                   
                   {/* Project badge */}
                   <div className="absolute top-4 right-4">
@@ -211,7 +212,7 @@ const Projects = () => {
                   </div>
                 </div>
                 
-                <div className="p-6">
+                <div className="p-6 glass">
                   <h4 className="text-lg font-bold mb-2">{project.title}</h4>
                   <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
