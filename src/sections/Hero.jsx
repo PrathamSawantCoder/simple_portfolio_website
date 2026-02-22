@@ -130,7 +130,7 @@ const Hero = () => {
 
           {/* Right content - Interactive profile area */}
           <div className="relative">
-            <div className="relative glass-glow rounded-3xl p-8">
+            <div className="relative glass-strong glass-glow rounded-3xl p-8">
               {/* Profile placeholder */}
               <div className="aspect-square bg-linear-to-br from-primary/20 to-highlight/20 rounded-2xl flex items-center justify-center mb-6">
                 <div className="relative w-full h-full overflow-hidden text-6xl font-bold gradient-text">
