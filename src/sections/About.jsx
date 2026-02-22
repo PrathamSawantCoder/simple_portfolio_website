@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Bot, Lightbulb, Star, Trophy, Icon } from "lucide-react";
+import { Bot, Bug, Lightbulb, Star, Trophy } from "lucide-react";
 import {scrollToSection} from '@/utils/scrollToSection'
 
 const skills = [
@@ -21,6 +21,11 @@ const achievements = [
     icon: Lightbulb,
     title: "Creative Solutions",
     description: "Innovative approaches",
+  },
+  {
+    icon: Bug,
+    title: "Debug",
+    description: "Unique Approch to Debug and Solve Problems",
   },
 ];
 
@@ -106,21 +111,21 @@ const About = () => {
                     </span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold">Pratham</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="text-2xl font-bold">Pratham Sawant</h3>
+                    <p className="text-muted-foreground hover:text-primary ">
                       Full Stack Developer
                     </p>
                   </div>
                 </div>
 
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-6 hover:text-primary ">
                   I'm a passionate full-stack developer with 1.5+ years of
                   experience creating beautiful, functional web applications. I
                   specialize in modern JavaScript frameworks and have a keen eye
                   for user experience design.
                 </p>
 
-                <p className="text-muted-foreground leading-relaxed hover:text-primary">
+                <p className="text-muted-foreground leading-relaxed hover:text-primary ">
                   When I'm not coding, you can find me exploring new
                   technologies, playing video games, or sharing knowledge with
                   the developer community.
@@ -205,7 +210,7 @@ const About = () => {
             <div className="scroll-reveal">
               <div className="glass-glow rounded-2xl p-6 text-center">
                 <h4 className="text-xl font-bold mb-3">
-                  Ready to work together?
+                  Ready to work together with me?
                 </h4>
                 <p className="text-muted-foreground mb-4">
                   I'm always excited to take on new challenges and collaborate

@@ -103,6 +103,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 className="hover-lift px-8 py-4 text-lg"
+                onClick={() => scrollToSection("projects")}
               >
                 View My Work
               </Button>
@@ -172,10 +173,10 @@ const Hero = () => {
                   <a
                     key={label}
                     href={href}
-                    className="w-10 h-10 bg-surface rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover-scale"
+                    className="w-10 h-10 bg-surface rounded-full flex items-center justify-center hover:bg-primary hover:text-secondary transition-colors duration-300 hover-scale "
                     style={{ transitionDelay: `${index * 0.1}s` }}
                   >
-                    <Icon />
+                    <Icon className= "tilt-shaking"/>
                   </a>
                 ))}
               </div>
