@@ -132,7 +132,13 @@ const Hero = () => {
             <div className="relative glass-glow rounded-3xl p-8">
               {/* Profile placeholder */}
               <div className="aspect-square bg-linear-to-br from-primary/20 to-highlight/20 rounded-2xl flex items-center justify-center mb-6">
-                <div className="text-6xl font-bold gradient-text">P</div>
+                <div className="relative w-full h-full overflow-hidden text-6xl font-bold gradient-text">
+                  
+                  <img src="/pratham_photos/photo_3.jpeg" alt="pratham" className="w-full h-full object-cover rounded-lg"/>
+                  <div className="absolute inset-0 aspect-square bg-linear-to-br from-primary/20 to-highlight/20 
+                   rounded-lg" />
+                  
+                </div>
               </div>
 
               {/* Interactive skills */}
@@ -146,6 +152,8 @@ const Hero = () => {
                     "UI/UX",
                     "Python",
                     "MongoDB",
+                    "Tailwind CSS",
+                    
                   ].map((skill, index) => (
                     <span
                       key={skill}
