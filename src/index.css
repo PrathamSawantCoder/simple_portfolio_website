@@ -71,7 +71,7 @@
     border: 1px solid color-mix(in srgb, var(--color-surface) 60%, transparent);
   }
 
-  .glass-glow:hover {
+  .glass-glow {
     background-color: color-mix(in srgb, var(--color-surface) 60%, transparent);
     backdrop-filter: blur(20px);
     border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
@@ -79,9 +79,9 @@
     transition: all 0.35s ease;
   }
 
-  /* .glass-glow:hover {
+  .glass-glow:hover {
     box-shadow: 0 0 30px rgb(32 178 166 / 0.4);
-  } */
+  }
 
   /* Animation utilities */
   .animate-fade-in {
