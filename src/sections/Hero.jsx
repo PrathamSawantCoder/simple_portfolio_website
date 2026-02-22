@@ -84,8 +84,8 @@ const Hero = () => {
                 </span>
               </h1>
 
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                I make Beautiful, Modern and User-friendly Apps and Website to
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl font-open-sans hover:text-primary transistion-colors duration-300">
+                I make beautiful, modern and user-friendly Apps and Website to
                 solve real problems.
               </p>
             </div>
@@ -129,7 +129,7 @@ const Hero = () => {
           </div>
 
           {/* Right content - Interactive profile area */}
-          <div className="relative">
+          <div className="relative mb-5">
             <div className="relative glass-strong glass-glow rounded-3xl p-8">
               {/* Profile placeholder */}
               <div className="aspect-square bg-linear-to-br from-primary/20 to-highlight/20 rounded-2xl flex items-center justify-center mb-6">
