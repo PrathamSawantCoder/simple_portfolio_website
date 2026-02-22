@@ -162,7 +162,7 @@ const Contact = () => {
       ref={contactRef}
       className="section bg-linear-to-br from-background via-background to-surface/50"
     >
-      <div className="container">
+      <div className="container ">
         <div className="text-center mb-16 scroll-reveal">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Get In <span className="gradient-text">Touch</span>
