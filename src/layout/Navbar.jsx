@@ -26,11 +26,11 @@ const navLinks = [
             href: '#projects',
             text: 'Projects'
         },
-        {
-            id: 5,
-            href: '#testimonials',
-            text: 'Testimonials'
-        },
+        // {
+        //     id: 5,
+        //     href: '#testimonials',
+        //     text: 'Testimonials'
+        // },
         {
             id: 6,
             href: '#contact',

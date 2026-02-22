@@ -163,8 +163,21 @@
     background: linear-gradient(
       135deg,
       var(--color-primary) 0%,
-      var(--color-highlight) 100%
+      var(--color-highlight) 100%);
+    
+    
+    
+  }
+
+  .gradient-bg:hover {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary) 0%,
+      var(--color-highlight) 105%
     );
+    background-size: 300% 300%;
+    animation: gradientMove 4s ease infinite;
+    transition: all 0.4s ease;
   }
 
   .gradient-text {
@@ -390,5 +403,17 @@
   }
   .tilt-shaking:hover {
     animation: tilt-shaking 1s ease-in-out infinite;
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 100% 100%;
+    }
+    50% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
   }
 }

@@ -1,72 +1,41 @@
+import { ExternalLink } from 'lucide-react'
 import { useState, useEffect, useRef } from 'react'
+import { scrollToSection } from '@/utils/scrollToSection'
 
-const categories = ['all', 'web', 'mobile', 'design', 'fullstack']
+const categories = ['all', 'web', 'mobile', 'fullstack']
   
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with real-time inventory management and secure payment processing.',
+    title: 'Ylä Karjalan Sähkö Website',
+    description: 'A responsive and user-friendly website for an electrician company.',
     image: '/projects/yks_web.png',
-    category: 'fullstack',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    demoUrl: '#',
-    githubUrl: '#',
+    category: 'web',
+    technologies: ['React', 'Tailwind CSS', 'Node.js' ],
+    demoUrl: 'https://yks-website.vercel.app',
+    githubUrl: 'https://yks-website.vercel.app',
     featured: true
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'Collaborative task management tool with real-time updates and team collaboration features.',
+    title: 'Apnine AI App',
+    description: 'AI SAAS website with user-friendly interface and advanced features like image generation, blog and article generation, AI object remover and more.',
     image: '/projects/apnine_ai.png',
-    category: 'web',
-    technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-    demoUrl: '#',
-    githubUrl: '#',
+    category: 'fullstack',
+    technologies: ['Next.js', 'Clerk', 'Cloudinary', 'Tailwind CSS', 'API'],
+    demoUrl: 'https://app.apnine.com',
+    githubUrl: 'https://app.apnine.com',
     featured: true
   },
   {
     id: 3,
-    title: 'Weather Dashboard',
-    description: 'Beautiful weather application with interactive maps and detailed forecasts.',
+    title: 'Apple Macbook Store Clone',
+    description: 'Developed a fully responsive clone of the Apple Macbook Store with enhanced 3D models and visuals animation.',
     image: '/projects/apple_web.png',
     category: 'web',
-    technologies: ['React', 'OpenWeather API', 'Chart.js'],
-    demoUrl: '#',
-    githubUrl: '#',
-    featured: false
-  },
-  {
-    id: 4,
-    title: 'Fitness Tracker',
-    description: 'Mobile-first fitness tracking app with workout plans and progress analytics.',
-    image: '/projects/yks_web.png',
-    category: 'mobile',
-    technologies: ['React Native', 'Redux', 'Firebase'],
-    demoUrl: '#',
-    githubUrl: '#',
-    featured: false
-  },
-  {
-    id: 5,
-    title: 'Brand Identity Design',
-    description: 'Complete brand identity design for tech startup including logo and marketing materials.',
-    image: '/projects/apnine_ai.png',
-    category: 'design',
-    technologies: ['Figma', 'Adobe Creative Suite'],
-    demoUrl: '#',
-    githubUrl: '#',
-    featured: false
-  },
-  {
-    id: 6,
-    title: 'Social Media Dashboard',
-    description: 'Analytics dashboard for social media management with real-time data visualization.',
-    image: '/projects/apple_web.png',
-    category: 'fullstack',
-    technologies: ['Next.js', 'D3.js', 'PostgreSQL'],
-    demoUrl: '#',
-    githubUrl: '#',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS','Three.js', 'GSAP', 'PostgreSQL'],
+    demoUrl: 'https://pratham-apple-clone.vercel.app/',
+    githubUrl: 'https://github.com/PrathamSawantCoder/apple_website',
     featured: true
   }
 ]
@@ -120,22 +89,7 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12 scroll-reveal">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActiveFilter(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                activeFilter === category
-                  ? 'gradient-bg text-white'
-                  : 'glass text-muted-foreground hover:text-primary hover:bg-primary/10'
-              }`}
-            >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
-            </button>
-          ))}
-        </div>
+        
 
         {/* Featured projects */}
         <div className="mb-16 scroll-reveal">
@@ -144,10 +98,10 @@ const Projects = () => {
             {projects.filter(p => p.featured).map((project, index) => (
               <div 
                 key={project.id}
-                className="group relative overflow-hidden rounded-3xl hover-scale"
+                className="group relative overflow-hidden rounded-3xl hover-scale "
                 style={{ transitionDelay: `${index * 0.2}s` }}
               >
-                <div className="relative h-96 overflow-hidden">
+                <div className="relative z-10 h-96 overflow-hidden">
                   <div 
                     className="absolute inset-0 bg-linear-to-br from-primary/20 to-highlight/20"
                     style={{
@@ -166,12 +120,12 @@ const Projects = () => {
                       <h4 className="text-2xl font-bold">{project.title}</h4>
                       <p className="text-sm opacity-90">{project.description}</p>
                       <div className="flex gap-4">
-                        <a href={project.demoUrl} className="px-4 py-2 bg-white/20 backdrop-blur rounded-full text-sm hover:bg-white/30 transition-colors">
+                        <a href={project.demoUrl} className="px-4 py-2 bg-white/20 backdrop-blur rounded-full text-sm hover:bg-white/30 transition-colors" target="_blank">
                           Live Demo
                         </a>
-                        <a href={project.githubUrl} className="px-4 py-2 bg-white/20 backdrop-blur rounded-full text-sm hover:bg-white/30 transition-colors">
+                        {/* <a href={project.githubUrl} className="px-4 py-2 bg-white/20 backdrop-blur rounded-full text-sm hover:bg-white/30 transition-colors" target="_blank">
                           View Code
-                        </a>
+                        </a> */}
                       </div>
                     </div>
                   </div>
@@ -195,6 +149,23 @@ const Projects = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Filter buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12 scroll-reveal">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveFilter(category)}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                activeFilter === category
+                  ? 'gradient-bg text-white'
+                  : 'glass text-muted-foreground hover:text-primary hover:bg-primary/10 cursor-pointer'
+              }`}
+            >
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </button>
+          ))}
         </div>
 
         {/* All projects grid */}
@@ -230,12 +201,12 @@ const Projects = () => {
                   {/* Hover overlay */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 flex items-center justify-center">
                     <div className="flex gap-4">
-                      <a href={project.demoUrl} className="w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
-                        <div className="w-4 h-4 bg-current rounded" />
+                      <a href={project.demoUrl} className="w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/30 transition-colors" target="_blank">
+                        <ExternalLink className='w-6 h-6 hover:scale-110 transition-all duration-300' />
                       </a>
-                      <a href={project.githubUrl} className="w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                      {/* <a href={project.githubUrl} className="w-10 h-10 bg-white/20 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/30 transition-colors" target="_blank">
                         <div className="w-4 h-4 bg-current rounded" />
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
@@ -268,12 +239,12 @@ const Projects = () => {
         {/* CTA */}
         <div className="text-center mt-16 scroll-reveal">
           <div className="glass-glow rounded-3xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl lg:text-3xl font-bold mb-4">Have a project in mind?</h3>
+            <h3 className="text-2xl lg:text-3xl font-bold mb-4">Would you like me to join you?</h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               I'm always excited to work on new and challenging projects. 
               Let's create something amazing together!
             </p>
-            <button className="gradient-bg text-white px-8 py-4 rounded-full font-medium hover-scale">
+            <button className="gradient-bg text-white px-8 py-4 rounded-full font-medium hover-scale cursor-pointer" onClick={() => scrollToSection('contact')}>
               Start Your Project
             </button>
           </div>

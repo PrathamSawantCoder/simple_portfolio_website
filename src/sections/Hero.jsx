@@ -175,6 +175,8 @@ const Hero = () => {
                     href={href}
                     className="w-10 h-10 bg-surface rounded-full flex items-center justify-center hover:bg-primary hover:text-secondary transition-colors duration-300 hover-scale "
                     style={{ transitionDelay: `${index * 0.1}s` }}
+                    rel="noopener noreferrer"
+                    target="_blank"
                   >
                     <Icon className= "tilt-shaking"/>
                   </a>
