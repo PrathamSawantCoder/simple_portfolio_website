@@ -173,13 +173,13 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
           {/* Contact form */}
           <div className="scroll-reveal">
-            <div className="glass-glow rounded-3xl p-8">
+            <div className="glass-glow rounded-3xl p-6 sm:p-8 w-full">
 
               {/* FORM */}
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 w-full">
                 {/* Hidden access key field for Web3Forms */}
                 <input type="hidden" name="access_key" value={formKey} />
                 
@@ -331,12 +331,12 @@ const Contact = () => {
                       <a
                         key={index}
                         href={link}
-                        className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-all duration-300"
+                        className="flex items-center gap-4 md:p-4 rounded-xl hover:bg-surface transition-all duration-300"
                         rel="noopener noreferrer"
                         target="_blank"
                       >
-                        <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-xl">
-                          <Icon />
+                        <div className="w-10 md:w-15 h-10 md:h-15 bg-primary/20 rounded-xl flex items-center justify-center text-xl">
+                          <Icon className= "tilt-shaking"/>
                         </div>
                         <div>
                           <div className="font-medium">{title}</div>
@@ -363,11 +363,11 @@ const Contact = () => {
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 p-4 rounded-xl hover:bg-surface transition-all duration-300 hover-scale"
+                      className="grid md:flex items-center gap-3 p-4 rounded-xl hover:bg-surface transition-all duration-300 hover-scale"
                       style={{ transitionDelay: `${index * 0.1}s` }}
                     >
-                      <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center text-lg">
-                        <Icon />
+                      <div className="w-10 h-10 md:w-15 md:h-15 bg-primary/20 rounded-lg flex items-center justify-center text-lg">
+                        <Icon className= "tilt-shaking"/>
                       </div>
                       <div>
                         <div className="font-medium">{name}</div>
