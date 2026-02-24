@@ -79,12 +79,12 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="block">Hi, I'm Pratham</span>
-                <span className="block gradient-text text-4xl lg:text-6xl mt-3 h-16">
+                <span className="block gradient-text-hero text-4xl lg:text-6xl mt-3 h-16">
                   <TypeAnimation sequence={sequence} repeat={Infinity} />
                 </span>
               </h1>
 
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl font-open-sans hover:text-primary transistion-colors duration-300">
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl font-open-sans hover:text-primary transistion-colors duration-300 mt-2">
                 I make beautiful, modern and user-friendly Apps and Website to
                 solve real problems.
               </p>
