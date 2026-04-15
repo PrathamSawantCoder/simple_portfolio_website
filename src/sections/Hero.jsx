@@ -132,7 +132,7 @@ const Hero = () => {
           <div className="relative mb-5">
             <div className="relative glass-strong glass-glow rounded-3xl p-8 origin-bottom-left rotate-6 lg:rotate-8 scale-70 hover:rotate-0 hover:scale-100  transition-transform duration-700">
               {/* Profile placeholder */}
-              <div className="aspect-square rounded-[1.4rem] bg-linear-to-br from-white/10 via-primary/10 to-highlight/15 p-[1px] shadow-[0_20px_60px_rgba(0,0,0,0.28)] mb-6">
+              <div className="aspect-square rounded-[1.4rem] bg-linear-to-br from-white/10 via-primary/10 to-highlight/15 p-px shadow-[0_20px_60px_rgba(0,0,0,0.28)] mb-6">
                 <div className="relative w-full h-full overflow-hidden rounded-[1.3rem] border border-white/10 bg-linear-to-br from-primary/20 to-highlight/20 text-6xl font-bold gradient-text">
                   
                   <img src="/pratham_photos/photo_3.jpeg" alt="pratham" className="w-full h-full object-cover rounded-lg"/>
