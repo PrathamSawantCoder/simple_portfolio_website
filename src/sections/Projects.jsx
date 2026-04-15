@@ -7,13 +7,13 @@ const categories = ['all', 'web', 'mobile', 'fullstack']
 const projects = [
   {
     id: 1,
-    title: 'Ylä Karjalan Sähkö Website',
-    description: 'A responsive and user-friendly website made for my present electrician company named Ylä Karjalan Sähkö Oy.',
-    image: '/projects/yks_web.png',
+    title: 'Lumiere Restaurant Website',
+    description: 'Developed a fully responsive Lumiere Restaurant website with premium and subtle animations and integrated AI chatbot to enhance user experience .',
+    image: '/projects/lumiere_restaurant.png',
     category: 'web',
-    technologies: ['React', 'Tailwind CSS', 'Node.js' ],
-    demoUrl: 'https://yks-website.vercel.app',
-    githubUrl: 'https://yks-website.vercel.app',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'AI Agents', 'Web3Forms', 'Vercel'],
+    demoUrl: 'https://lumi-re-gastronomy-tau.vercel.app/',
+    githubUrl: 'https://github.com/PrathamSawantCoder/lumi-re-gastronomy',
     featured: true
   },
   {
@@ -29,6 +29,17 @@ const projects = [
   },
   {
     id: 3,
+    title: 'Ylä Karjalan Sähkö Website',
+    description: 'A responsive and user-friendly website made for my present electrician company named Ylä Karjalan Sähkö Oy.',
+    image: '/projects/yks_web.png',
+    category: 'web',
+    technologies: ['React', 'Tailwind CSS', 'Node.js' ],
+    demoUrl: 'https://yks-website.vercel.app',
+    githubUrl: 'https://yks-website.vercel.app',
+    featured: true
+  },
+  {
+    id: 4,
     title: 'Apple Macbook Store Clone',
     description: 'Developed a fully responsive clone of the Apple Macbook Store with enhanced 3D models and visuals animation.',
     image: '/projects/apple_web.png',
@@ -86,7 +97,7 @@ const Projects = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A showcase of my recent work and creative solutions
+            A showcase of my recent real-world work and creative solutions
           </p>
         </div>
 
