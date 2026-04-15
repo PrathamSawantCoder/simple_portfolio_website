@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/Button";
 import { scrollToSection } from "@/utils/scrollToSection";
 import { TypeAnimation } from "react-type-animation";
-import { Github, Linkedin, Box } from "lucide-react";
+import { Github, Linkedin, Box, Camera } from "lucide-react";
 
 const socialLinks = [
   {
@@ -130,14 +130,29 @@ const Hero = () => {
 
           {/* Right content - Interactive profile area */}
           <div className="relative mb-5">
-            <div className="relative glass-strong glass-glow rounded-3xl p-8">
+            <div className="relative glass-strong glass-glow rounded-3xl p-8 origin-bottom-left rotate-6 lg:rotate-8 scale-70 hover:rotate-0 hover:scale-100  transition-transform duration-700">
               {/* Profile placeholder */}
-              <div className="aspect-square bg-linear-to-br from-primary/20 to-highlight/20 rounded-2xl flex items-center justify-center mb-6">
-                <div className="relative w-full h-full overflow-hidden text-6xl font-bold gradient-text">
+              <div className="aspect-square rounded-[1.4rem] bg-linear-to-br from-white/10 via-primary/10 to-highlight/15 p-[1px] shadow-[0_20px_60px_rgba(0,0,0,0.28)] mb-6">
+                <div className="relative w-full h-full overflow-hidden rounded-[1.3rem] border border-white/10 bg-linear-to-br from-primary/20 to-highlight/20 text-6xl font-bold gradient-text">
                   
                   <img src="/pratham_photos/photo_3.jpeg" alt="pratham" className="w-full h-full object-cover rounded-lg"/>
-                  <div className="absolute inset-0 aspect-square bg-linear-to-br from-primary/20 to-highlight/20 
-                   rounded-lg" />
+                  <div className="absolute inset-0 rounded-[1.3rem] ring-1 ring-white/15 shadow-[inset_0_1px_0_rgba(255,255,255,0.25),inset_0_-30px_60px_rgba(0,0,0,0.2)] pointer-events-none" />
+                  <div className="absolute inset-0 rounded-lg bg-linear-to-t from-black/45 via-black/10 to-white/10 pointer-events-none" />
+                  <div className="absolute inset-x-[12%] top-0 h-20 rounded-full bg-white/20 blur-2xl opacity-70 pointer-events-none" />
+                  <div className="absolute right-4 top-4 h-14 w-14 rounded-full border border-white/20 bg-white/8 backdrop-blur-md pointer-events-none" />
+                  <div className="absolute top-4 left-4 flex items-center gap-2 rounded-full border border-white/30 bg-black/35 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-white backdrop-blur-sm pointer-events-none">
+                    <Camera className="h-3.5 w-3.5" />
+                    Shot on camera
+                  </div>
+                  <div className="absolute inset-x-4 bottom-4 flex items-end justify-between text-white pointer-events-none">
+                    <div className="rounded-xl border border-white/20 bg-black/30 px-3 py-2 backdrop-blur-sm">
+                      <p className="text-[10px] uppercase tracking-[0.28em] text-white/70">Portrait</p>
+                      <p className="text-sm font-semibold">Captured moment</p>
+                    </div>
+                    <div className="rounded-full border border-white/25 bg-black/30 px-3 py-1 text-[10px] uppercase tracking-[0.26em] backdrop-blur-sm">
+                      35mm
+                    </div>
+                  </div>
                   
                 </div>
               </div>
